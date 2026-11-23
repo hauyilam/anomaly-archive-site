@@ -88,12 +88,14 @@ footer { padding-top: 32px; padding-bottom: 48px; font-size: 13px; color: var(--
     data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
     Instagram data is also subject to <a href="https://privacycenter.instagram.com/policy">Meta's
     Privacy Policy</a> and the <a href="https://developers.facebook.com/terms">Meta Platform Terms</a>.
-    Publishing is performed through <strong>Upload-Post</strong>, a third-party publishing service,
-    under its <a href="https://www.upload-post.com/privacy-policy">Privacy Policy</a> and
-    <a href="https://www.upload-post.com/terms-of-service">Terms of Use</a>.</p>
+    Publishing is performed through third-party publishing services: <strong>Zernio</strong>
+    (primary; <a href="https://zernio.com/privacy-policy">Privacy Policy</a>,
+    <a href="https://zernio.com/tos">Terms of Service</a>) and <strong>Upload-Post</strong>
+    (earlier posts; <a href="https://www.upload-post.com/privacy-policy">Privacy Policy</a>,
+    <a href="https://www.upload-post.com/terms-of-service">Terms of Use</a>).</p>
   <p class="zh">使用本工具的 YouTube 功能即受 YouTube 服務條款約束；Google 的資料處理方式請見 Google 隱私權政策；
-    Instagram 資料同時適用 Meta 隱私權政策與 Meta 平台條款。影片發布透過第三方發布服務 Upload-Post 進行，
-    適用其隱私權政策與使用條款。</p>
+    Instagram 資料同時適用 Meta 隱私權政策與 Meta 平台條款。影片發布透過第三方發布服務 Zernio（主要）
+    與 Upload-Post（較早的貼文）進行，適用其隱私權政策與服務條款。</p>
 
   <h2>2. Information the Tool accesses</h2>
   <div class="table-wrap">
@@ -111,11 +113,12 @@ footer { padding-top: 32px; padding-bottom: 48px; font-size: 13px; color: var(--
             the Studio's own Reels (views, reach, average watch time, shares, saves, skip
             rate); comments on the Studio's own posts.</td>
         <td>Measure performance; read feedback.</td></tr>
-    <tr><td>Upload-Post (third-party publishing service)</td>
-        <td><em>Sent by the Tool:</em> the Studio's own finished video files, titles,
-            descriptions and captions. Upload-Post holds the connection to the Studio's own
-            YouTube channel and Instagram account.</td>
-        <td>Publish the Studio's Shorts and Reels.</td></tr>
+    <tr><td>Zernio and Upload-Post (third-party publishing services)</td>
+        <td><em>Sent by the Tool:</em> the Studio's own finished video files, thumbnails, titles,
+            descriptions and captions. <em>Received:</em> performance statistics (views, likes,
+            shares, saves, watch time, retention) and comments for the Studio's own posts. These
+            services hold the connection to the Studio's own YouTube channel and Instagram account.</td>
+        <td>Publish the Studio's Shorts and Reels; measure their performance.</td></tr>
   </table>
   </div>
   <p>Comments may include the public username and text of people who commented on the
@@ -129,17 +132,18 @@ footer { padding-top: 32px; padding-bottom: 48px; font-size: 13px; color: var(--
     <li>Only to publish the Studio's own content and to analyze the performance of the
       Studio's own content.</li>
     <li>Never sold, rented, used for advertising, or used to build profiles of individuals.</li>
-    <li>Shared with no third party except Upload-Post, which receives only the Studio's own
-      videos and captions in order to publish them. Data read from the YouTube API (statistics,
-      retention, comments) is never sent to Upload-Post or anyone else.</li>
+    <li>Shared with no third party except the publishing services Zernio and Upload-Post, which
+      receive only the Studio's own videos, thumbnails and captions in order to publish them.
+      Data the Tool reads from the YouTube API (statistics, retention, comments) is never sent to
+      these services or anyone else.</li>
     <li>Never used to access, read or post to any account other than the Studio's own.</li>
   </ul>
   <p>The Studio's use and transfer of information received from Google APIs adheres to the
     <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API
     Services User Data Policy</a>, including the Limited Use requirements.</p>
   <p class="zh">資料只用於發布及分析本工作室自己的作品；絕不販售、出租、用於廣告或建立個人輪廓。
-    除 Upload-Post 只接收本工作室自己的影片與文案以進行發布之外，不分享給任何第三方；
-    從 YouTube API 讀取的資料（統計、留存、留言）絕不傳給 Upload-Post 或任何人。
+    除發布服務 Zernio 與 Upload-Post 只接收本工作室自己的影片、縮圖與文案以進行發布之外，不分享給任何第三方；
+    本工具從 YouTube API 讀取的資料（統計、留存、留言）絕不傳給這些服務或任何人。
     本工作室對 Google API 所取得資料的使用與傳輸，遵守 Google API 服務使用者資料政策（含 Limited Use 規範）。</p>
 
   <h2>4. Storage and security</h2>
@@ -147,19 +151,22 @@ footer { padding-top: 32px; padding-bottom: 48px; font-size: 13px; color: var(--
     <li>Access tokens and API data are stored only on the Studio owner's own computer, in
       files that are excluded from version control and never published.</li>
     <li>The Studio operates no server of its own; the Tool's only network requests go over
-      HTTPS to the Google and Meta APIs (reading data) and to Upload-Post (publishing).</li>
+      HTTPS to the Google and Meta APIs (reading data) and to Zernio and Upload-Post (publishing
+      and reading the Studio's own post statistics).</li>
   </ul>
   <p class="zh">存取權杖與 API 資料只儲存在負責人自己的電腦上，排除於版本控制之外且從不公開；
-    本工作室沒有自己的伺服器，本工具只以 HTTPS 連線到 Google 與 Meta 的 API（讀取數據）及 Upload-Post（發布）。</p>
+    本工作室沒有自己的伺服器，本工具只以 HTTPS 連線到 Google 與 Meta 的 API（讀取數據），
+    以及 Zernio 與 Upload-Post（發布並讀取自己作品的成效）。</p>
 
   <h2>5. Retention</h2>
   <p><strong>YouTube API data</strong> (statistics, retention data, comments and reports derived
     from them) is kept locally for no more than 30 days; the Tool automatically deletes older
     files each time it runs, in line with the YouTube API Services Developer Policies.
-    <strong>Instagram data</strong> is kept locally for up to 24 months to compare episodes, then
-    deleted.</p>
+    Statistics about the Studio's YouTube videos received from Zernio or Upload-Post are kept
+    for no more than 30 days in the same way. <strong>Instagram data</strong> is kept locally for
+    up to 24 months to compare episodes, then deleted.</p>
   <p class="zh">YouTube API 資料（統計、留存、留言及由其產生的報告）於本機保存不超過 30 天，本工具每次執行時會自動刪除較舊的檔案；
-    Instagram 資料於本機保存最長 24 個月以比較各集表現，之後刪除。</p>
+    從 Zernio 或 Upload-Post 取得的 YouTube 影片統計亦同樣保存不超過 30 天；Instagram 資料於本機保存最長 24 個月以比較各集表現，之後刪除。</p>
 
   <h2 id="revoke">6. Revoking access</h2>
   <ul>
@@ -167,12 +174,15 @@ footer { padding-top: 32px; padding-bottom: 48px; font-size: 13px; color: var(--
       connections</a> (security settings page).</li>
     <li>Instagram / Meta: Instagram → Settings → Website permissions → Apps and websites, or
       Meta Business Settings → Integrations.</li>
+    <li>Zernio: disconnect the YouTube or Instagram account in the
+      <a href="https://zernio.com/dashboard">Zernio dashboard</a>, or remove Zernio's access from
+      the Google / Instagram settings above.</li>
     <li>Upload-Post: disconnect the YouTube or Instagram account in the Upload-Post dashboard
       (<a href="https://app.upload-post.com/manage-users">Manage users</a>), or remove
       Upload-Post's access from the Google / Instagram settings above.</li>
   </ul>
-  <p class="zh">可隨時至 Google 帳戶的「第三方連結」、Instagram／Meta 商業設定，或 Upload-Post 後台的帳號管理頁，
-    撤銷本工具及 Upload-Post 的存取權。</p>
+  <p class="zh">可隨時至 Google 帳戶的「第三方連結」、Instagram／Meta 商業設定，或 Zernio、Upload-Post 後台的帳號管理頁，
+    撤銷本工具及這些發布服務的存取權。</p>
 
   <h2 id="data-deletion">7. Data deletion</h2>
   <p>If you commented on one of the Studio's posts and want any copy of your comment removed
